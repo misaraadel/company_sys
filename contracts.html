@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" />
+
+        <title>
+        نظام ربط للفواتير
+        </title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+
+        <meta content="Themesbrand" name="author" />
+
+        <link rel="shortcut icon" href="assets/images/favicon.png">
+
+        <link href="assets/css/lib/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+        <!--english version -->
+        <!-- <link href="assets/css/lib/app.min.css" id="app-style" rel="stylesheet" type="text/css" /> -->
+
+        <link href="assets/css/lib/app-rtl.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <style>
+        :root{
+            --primary: #92278F;
+            --secondary: #00A79D;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="layout-wrapper">
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                <img src="assets/images/logo-sm.png" alt="" height="22">
+                            </span>
+
+                            <span class="logo-lg">
+                                <img src="assets/images/logo-dark.png" alt="" height="20">
+                            </span>
+                        </a>
+
+                        <a href="index.html" class="logo logo-light">
+                            <span class="logo-sm">
+                                <img src="assets/images/logo-sm.png" alt="" height="22">
+                            </span>
+
+                            <span class="logo-lg">
+                                <img src="assets/images/logo-light.png" alt="" height="20">
+                            </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+
+                    <!-- App Search-->
+                    <form class="app-search d-none d-lg-block">
+                        <div class="position-relative">
+                            <input type="text" class="form-control" placeholder="البحث...">
+                            <span class="uil-search"></span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="d-flex">
+
+                    <div class="dropdown d-inline-block d-lg-none ml-2">
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="uil-search"></i>
+                        </button>
+
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                            aria-labelledby="page-header-search-dropdown">
+                
+                            <form class="p-3">
+                                <div class="form-group m-0">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="البحث ..." aria-label="Recipient's username">
+                                        
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit">
+                                                <i class="mdi mdi-magnify"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block ">
+                        <button type="button" class="btn header-item waves-effect"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="assets/images/flags/saudi_arabia.png" alt="Header Language" height="16">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="assets/images/flags/saudi_arabia.png" alt="user-image" class="mr-1" height="12"> <span class="align-middle">
+                                    العربية
+                                </span>
+                            </a>
+
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="assets/images/flags/us.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">
+                                    english
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-none d-lg-inline-block ml-1">
+                        <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                            <i class="uil-minus-path"></i>
+                        </button>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="uil-bell"></i>
+                            
+                            <span class="badge badge-danger badge-pill">3</span>
+                        </button>
+
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                            aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h5 class="m-0 font-size-16">
+                                            Notifications 
+                                        </h5>
+                                    </div>
+
+                                    <div class="col-auto">
+                                        <a href="#!" class="small"> 
+                                            Mark all as read
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-simplebar style="max-height: 230px;">
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">
+                                                عنوان الرسالة
+                                            </h6>
+
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1">
+                                                    تفاصيل الرسالة
+                                                </p>
+
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">
+                                                عنوان الرسالة
+                                            </h6>
+
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1">
+                                                    تفاصيل الرسالة
+                                                </p>
+
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">
+                                                عنوان الرسالة
+                                            </h6>
+
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1">
+                                                    تفاصيل الرسالة
+                                                </p>
+
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="" class="text-reset notification-item">
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-1">
+                                                عنوان الرسالة
+                                            </h6>
+
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1">
+                                                    تفاصيل الرسالة
+                                                </p>
+
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-none">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img 
+                                class="rounded-circle header-profile-user"
+                                src="assets/images/users/avatar-4.jpg"
+                                alt="Header Avatar"  />
+
+                            <span class="d-none d-xl-inline-block ml-1 font-weight-medium font-size-15">
+                                اسم المستخدم
+                            </span>
+
+                            <i class="uil-angle-down d-none d-xl-inline-block font-size-15"></i>
+                        </button>
+
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <!-- item-->
+                            <a class="dropdown-item" href="#">
+                                <i class="uil uil-user-circle font-size-18 align-middle text-muted mr-1"></i>
+
+                                <span class="align-middle">
+                                صفحة الحساب
+                                </span>
+                            </a>
+
+                            <a class="dropdown-item d-block" href="#">
+                                <i class="uil uil-cog font-size-18 align-middle mr-1 text-muted"></i>
+
+                                <span class="align-middle">
+                                    تعديل الحساب
+                                </span> 
+                            </a>
+                            
+                            <a class="dropdown-item d-block" href="#">
+                                <i class="uil-globe font-size-18 align-middle mr-1 text-muted"></i>
+
+                                <span class="align-middle">
+                                    تغير اللغة
+                                </span> 
+                            </a>
+
+                            <a class="dropdown-item" href="#">
+                                <i class="uil uil-sign-out-alt font-size-18 align-middle mr-1 text-muted"></i>
+                                <span class="align-middle">
+                                    تسجيل خروج
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="vertical-menu">
+
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/images/logo-sm.png" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/logo-dark.png" alt="" height="20">
+                    </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="assets/images/logo-sm.png" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/logo-light.png" alt="" height="20">
+                    </span>
+                </a>
+            </div>
+
+            <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect vertical-menu-btn">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+
+            <div data-simplebar class="sidebar-menu-scroll">
+                <div id="sidebar-menu">
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li>
+                            <a href="index.html">
+                                <i class="uil-home-alt"></i>
+
+                                <span>
+                                الرئيسية
+                                </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a  href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="uil-user-circle"></i>
+                                <span>
+                                    شئون موظفين
+                                </span>
+                            </a>
+
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li>
+                                    <a href="clients.html">
+                                     اضافة جديد
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="client_list.html">
+                                    عرض الموظفين
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a  href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-car"></i>
+                                
+                                <span>
+                                    السيارات 
+                                </span>
+                            </a>
+
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li>
+                                    <a href="cars.html">
+                                    اضافة سياره 
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="cars_list.html">
+                                        قائمة السيارات
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a  href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-list-ol "></i>
+                                
+                                <span>
+                                    عقود الايجار
+                                </span>
+                            </a>
+
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li>
+                                    <a href="contracts.html">
+                                        اضافة عقد
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="rent_list.html">
+                                        قائمة العقود
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a  href="javascript: void(0);" class="has-arrow waves-effect">
+                                  <i class="bx bxs-wrench"></i>
+                                
+                                <span>
+                                    عملاء الصيانة المجانية
+                                </span>
+                            </a>
+
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li>
+                                    <a href="free_fix.html">
+                                    اضافة عميل
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="free_fix_list.html">
+                                    قائمة الصيانة
+                                    </a>    
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a  href="javascript: void(0);" class="has-arrow waves-effect">
+                                  <i class="bx bxs-wrench"></i>
+                                
+                                <span>
+                                    عملاء عقود الصيانة 
+                                </span>
+                            </a>
+
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li>
+                                    <a href="payment_fix.html">
+                                    اضافة عميل
+                                    </a>
+                                </li>
+
+                                 <li>
+                                    <a href="payment_fix_list.html">
+                                    قائمة الصيانة
+                                    </a>    
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a  href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-list-check"></i>
+                                
+                                <span>
+                                عقود التركيب
+                                </span>
+                            </a>
+
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li>
+                                    <a href="rent_contract.html">
+                                    اضافة عقد  
+                                    </a>
+                                </li>
+
+                                 <li>
+                                    <a href="contract_list.html"">
+                                    قائمه  العروض
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0">
+                                    بيان العقود
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-5 w-100">
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"  placeholder=" التاريخ    ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"  placeholder="  رقم العقد    ">
+                                        </div>
+                                    </div>  
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"  placeholder="  العميل   ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"  placeholder="  الفرع    ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"  placeholder="  البائع   ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="   وصف التعاقد  ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="   رقم الجوال  ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-12 mb-3">
+                                        <div class="page-title-box d-flex align-items-center justify-content-between">
+                                            <h4 class="mb-0">
+                                                المرحلة الاولي
+                                            </h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="   التاريخ  ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="  فريق العمل   ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-12 mb-3">
+                                        <div class="page-title-box d-flex align-items-center justify-content-between">
+                                            <h4 class="mb-0">
+                                                المرحلة الثانية
+                                            </h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="   التاريخ  ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="  فريق العمل   ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-12 mb-3">
+                                        <div class="page-title-box d-flex align-items-center justify-content-between">
+                                            <h4 class="mb-0">
+                                                المرحلة الثالثة
+                                            </h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="   التاريخ  ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="  فريق العمل   ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"  placeholder="   تاريخ التشغيل   ">
+                                        </div>
+                                    </div> 
+
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"  placeholder="  مدة الصيانة   والضمان   ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"  placeholder="   تاريخ بداية الصيانة   ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="  تاريخ نهاية الصيانة   ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="    ملاحظات   ">
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <button class="btn d-flex align-items-center justify-content-between align-content-center btn-primary chat-send w-md waves-effect waves-light" >
+                                                <i class="bx bx-plus float-right"></i>
+        
+                                                <span class="d-sm-inline-block ml-2">
+                                                أضافة عقد
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <script src="assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
+
+    <script src="assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
+
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <script src="assets/js/pages/apexcharts.init.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
