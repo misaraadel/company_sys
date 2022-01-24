@@ -686,6 +686,14 @@ h1, h2, h3, h4, h5, h6, .heading {
   margin: 0px;
 }
 
+.table th {
+  text-align: center;
+}
+
+.table .small-row th, .table .small-row td {
+  min-width: 180px;
+}
+
 @media (max-width: 900px) {
   .logo-sm img {
     width: 100px;
